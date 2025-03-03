@@ -7,7 +7,7 @@ Esta API tem como objetivo fornecer um retorno de dados para análise de dados c
 - **Java 17** – Linguagem de programação.
 - **Spring Boot** – Framework para construção da API.
 - **Spring Web** – Para criação dos endpoints REST.
-- **RestTemplate** (ou alternativamente **WebClient**) – Para consumo das APIs externas (Geocoding e Open Meteo).
+- **RestTemplate** – Para consumo das APIs externas (Geocoding e Open Meteo).
 
 ## Funcionalidades
 
