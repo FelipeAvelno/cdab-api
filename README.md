@@ -1,4 +1,4 @@
-# Climate Data Analysis API for Brazil
+# Climate Data Analysis API
 
 Esta API tem como objetivo fornecer uma plataforma para análise de dados climáticos brasileiros e previsão de eventos extremos. A aplicação foi desenvolvida em Java utilizando Spring Boot e segue os padrões de arquitetura de DTO's para garantir uma estrutura organizada e de fácil manutenção.
 
