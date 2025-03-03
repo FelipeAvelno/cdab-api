@@ -1,44 +1,35 @@
-# Climate Data Analysis API for Brazil ⛅
+# Climate Data Analysis API for Brazil
 
-API para análise e previsão de dados climáticos brasileiros com foco em eventos extremos.
+Esta API tem como objetivo fornecer uma plataforma para análise de dados climáticos brasileiros e previsão de eventos extremos. A aplicação foi desenvolvida em Java utilizando Spring Boot e segue os padrões de arquitetura de DTO's para garantir uma estrutura organizada e de fácil manutenção.
 
 ## Tecnologias Utilizadas
-- Java 17
-- Spring Boot 3.1.0
-- Spring Web MVC
-- Springdoc OpenAPI (Documentação)
-- Lombok
 
-## Endpoints
+- **Java 17**: Versão moderna e amplamente utilizada em projetos empresariais.
+- **Spring Boot**: Framework para desenvolvimento rápido de aplicações baseadas em microserviços e APIs REST.
+- **Maven**: Gerenciamento de dependências e construção do projeto.
+- **DTO (Data Transfer Object)**: Padrão de projeto para transferência de dados entre camadas da aplicação.
+- **Lombok** (opcional): Para reduzir o boilerplate de código (getters, setters, etc.).
 
-### GET /api/climate
-Parâmetros:
-- cidade (opcional)
-- estado (opcional)
-- regiao (opcional)
-- data (obrigatório, formato dd/MM/yyyy)
+## Funcionalidades
 
-Exemplo de Request:
+- **Endpoint GET `/api/weather`**: Recebe parâmetros como nome da cidade, estado ou região e uma data (ex.: `27/02`) e retorna um objeto JSON com as seguintes informações:
+  - Temperatura
+  - Umidade
+  - Sensação Térmica
+  - Velocidade do Vento (em km/h)
+  - Indicador de Evento Extremo (booleano)
 
-GET /api/climate?cidade=São Paulo&data=27/02/2024
+## Estrutura do Projeto
 
-Exemplo de Response:
-```json
-{
-    "local": "São Paulo",
-    "dataConsulta": "2024-02-27T15:30:45",
-    "temperatura": 28.5,
-    "umidade": 65.0,
-    "sensacaoTermica": 30.0,
-    "ventoKmh": 15.0,
-    "alertaEventoExtremo": "Tempestade prevista"
-}
-```
+A estrutura do projeto é organizada em pacotes que separam as responsabilidades de cada camada:
+- **controller**: Responsável por expor os endpoints REST.
+- **service**: Contém a lógica de negócio e integrações com possíveis fontes de dados externas.
+- **dto**: Objetos de transferência de dados entre as camadas.
 
-### Como executar
+## Como Executar
 
-1. Clone o repositório
-2. Execute com Maven:
-```bash
-mvn spring-boot:run
-# A API estará disponível em http://localhost:8080
+1. **Pré-requisitos**: Certifique-se de ter o Java 17 e o Maven instalados.
+2. **Clonar o repositório**:
+   ```bash
+   git clone https://github.com/FelipeAvelno/cdab-api.git
+   cd cdab-api
