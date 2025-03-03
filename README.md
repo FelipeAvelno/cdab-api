@@ -4,10 +4,10 @@ Esta API tem como objetivo fornecer um retorno de dados para análise de dados c
 
 ## Tecnologias Utilizadas
 
-- **Java 17**: Versão moderna e amplamente utilizada em projetos empresariais.
-- **Spring Boot**: Framework para desenvolvimento rápido de aplicações baseadas em microserviços e APIs REST.
-- **Maven**: Gerenciamento de dependências e construção do projeto.
-- **DTO (Data Transfer Object)**: Padrão de projeto para transferência de dados entre camadas da aplicação.
+- **Java 17** – Linguagem de programação.
+- **Spring Boot** – Framework para construção da API.
+- **Spring Web** – Para criação dos endpoints REST.
+- **RestTemplate** (ou alternativamente **WebClient**) – Para consumo das APIs externas (Geocoding e Open Meteo).
 
 ## Funcionalidades
 
