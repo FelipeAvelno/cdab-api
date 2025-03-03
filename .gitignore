@@ -5,7 +5,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS (Spring Tool Suite) ###
+# STS (Spring Tool Suite)
 .apt_generated
 .classpath
 .factorypath
