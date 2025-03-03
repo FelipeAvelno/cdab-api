@@ -1,6 +1,6 @@
 # Climate Data API
 
-Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para análise de dados climáticos brasileiros. O objetivo é fornecer informações sobre a previsão do tempo (temperatura, umidade, sensação térmica e velocidade do vento) para cidades, estados ou regiões do Brasil em uma data específica.
+Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para análise de dados climáticos. O objetivo é fornecer informações sobre a previsão do tempo (temperatura, umidade, sensação térmica e velocidade do vento) para cidades, estados ou regiões do Brasil em uma data específica.
 
 ## Funcionalidades
 
