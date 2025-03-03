@@ -8,7 +8,6 @@ Esta API tem como objetivo fornecer um retorno de dados para análise de dados c
 - **Spring Boot**: Framework para desenvolvimento rápido de aplicações baseadas em microserviços e APIs REST.
 - **Maven**: Gerenciamento de dependências e construção do projeto.
 - **DTO (Data Transfer Object)**: Padrão de projeto para transferência de dados entre camadas da aplicação.
-- **Lombok**: Para reduzir o boilerplate de código (getters, setters, etc.).
 
 ## Funcionalidades
 
