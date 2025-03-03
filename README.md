@@ -1,6 +1,13 @@
-# Climate Data Analysis API
+# Climate Data API
 
-Esta API tem como objetivo fornecer um retorno de dados para análise de dados climáticos brasileiros e previsão de eventos extremos. A aplicação foi desenvolvida em Java utilizando Spring Boot e segue os padrões de arquitetura de DTO's para garantir uma estrutura organizada e de fácil manutenção.
+Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para análise de dados climáticos brasileiros. O objetivo é fornecer informações sobre a previsão do tempo (temperatura, umidade, sensação térmica e velocidade do vento) para cidades, estados ou regiões do Brasil em uma data específica.
+
+## Funcionalidades
+
+- Consulta de previsão do tempo via requisição HTTP GET.
+- Conversão de nome de cidade/estado/região para coordenadas geográficas utilizando uma API Geocoding.
+- Consulta de dados climáticos em tempo real utilizando a API Open Meteo.
+- Retorno dos dados climáticos em formato JSON.
 
 ## Tecnologias Utilizadas
 
@@ -9,26 +16,11 @@ Esta API tem como objetivo fornecer um retorno de dados para análise de dados c
 - **Spring Web** – Para criação dos endpoints REST.
 - **RestTemplate** – Para consumo das APIs externas (Geocoding e Open Meteo).
 
-## Funcionalidades
-
-- **Endpoint GET `/api/weather`**: Recebe parâmetros como nome da cidade, estado ou região e uma data (ex.: `27/02`) e retorna um objeto JSON com as seguintes informações:
-  - Temperatura
-  - Umidade
-  - Sensação Térmica
-  - Velocidade do Vento (em km/h)
-  - Indicador de Evento Extremo (booleano)
- 
 ## Exemplo de requisição
 
-``http://localhost:8080/api/weather?city=SaoPaulo&day=27-02``
-
-## Estrutura do Projeto
-
-A estrutura do projeto é organizada em pacotes que separam as responsabilidades de cada camada:
-- **controller**: Responsável por expor os endpoints REST.
-- **service**: Contém a lógica de negócio e integrações com possíveis fontes de dados externas.
-- **dto**: Objetos de transferência de dados entre as camadas.
-
+```bash
+http://localhost:8080/clima?location=Sao+Paulo&date=27/02
+```
 
 ## Como Executar
 
@@ -37,3 +29,4 @@ A estrutura do projeto é organizada em pacotes que separam as responsabilidades
    ```bash
    git clone https://github.com/FelipeAvelno/cdab-api.git
    cd cdab-api
+
