@@ -16,17 +16,25 @@ Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para anális
 - **Spring Web** – Para criação dos endpoints REST.
 - **RestTemplate** – Para consumo das APIs externas (Geocoding e Open Meteo).
 
-## Exemplo de requisição
-
-```bash
-http://localhost:8080/clima?location=Sao+Paulo&date=27/02
-```
-
 ## Como Executar
 
-1. **Pré-requisitos**: Certifique-se de ter o Java 17 e o Maven instalados.
+1. **Pré-requisitos**: Certifique-se de ter o [Java 17](https://www.oracle.com/br/java/technologies/downloads/) e o [Maven](https://maven.apache.org/download.cgi) instalados.
+
 2. **Clonar o repositório**:
    ```bash
    git clone https://github.com/FelipeAvelno/cdab-api.git
    cd cdab-api
+   ```
+
+3. **Execute esses comandos:**
+   ```bash
+   mvn clean install
+   mvn spring-boot:run
+   ```
+
+4. **Realize uma requisição /GET:**
+   ```bash
+   http://localhost:8080/clima?location=Sao+Paulo&date=27/02
+   ```
+   
 
