@@ -34,8 +34,10 @@ Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para anális
 
 4. **Realize uma requisição /GET:**
    ```bash
-   http://localhost:8080/clima?location=Sao+Paulo&date=2025-03-04
-   # Deve enviar ano, mês e dia (enviar dias que ainda não ocorreram gerará erro)
+   http://localhost:8080/clima?location=Sao+Paulo&date=2023-03-04
    ```
    
+### Observações:
+
+Enviar data que não estão na base de dados da API (geralmente dados de muito tempo atrás) gerará um erro em forma de .json,  Deve enviar ano, mês e dia (enviar dias que ainda não ocorreram gerará erro)
 
