@@ -2,7 +2,8 @@
 
 Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para análise de dados climáticos. O objetivo é fornecer informações sobre a previsão do tempo (temperatura, umidade, sensação térmica e velocidade do vento) para cidades, estados ou regiões do Brasil em uma data específica.
 
-São utilizadas outras duas [API's](#observações) para receber uma localização para ser convertida em latitude e longitude e outra para informar os dados climáticos.
+> [!NOTE]
+> São utilizadas outras duas [API's](#observações) para receber uma localização para ser convertida em latitude e longitude e outra para informar os dados climáticos.
 
 ## Funcionalidades
 
@@ -41,10 +42,12 @@ São utilizadas outras duas [API's](#observações) para receber uma localizaç�
    
 ### Observações:
 
-Enviar data que não estão na base de dados da API (geralmente dados de muito tempo atrás) gerará um erro em forma de .json,  Deve enviar ano, mês e dia (enviar dias que ainda não ocorreram gerará erro).
+> [!WARNING]
+> Enviar data que não estão na base de dados da API (geralmente dados de muito tempo atrás) gerará um erro em forma de .json,  Deve enviar ano, mês e dia (enviar dias que ainda não ocorreram gerará erro).
 Os dados podem variar em aproximadamente 4 unidades.
 
-API's utilizadas:
-- [OpenMeteo](https://open-meteo.com/en/docs/historical-weather-api)<br>
-- [GeoCoding](https://developers.google.com/maps/documentation/geocoding/overview?hl=pt-br)
+> [!NOTE]
+> API's utilizadas:
+> - [OpenMeteo](https://open-meteo.com/en/docs/historical-weather-api)<br>
+> - [GeoCoding](https://developers.google.com/maps/documentation/geocoding/overview?hl=pt-br)
 
