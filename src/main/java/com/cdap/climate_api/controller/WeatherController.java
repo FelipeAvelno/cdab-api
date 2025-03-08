@@ -15,13 +15,17 @@ public class WeatherController {
     private WeatherService weatherService;
 
     @GetMapping("/clima")
-    public WeatherResponse getWeather(@RequestParam String location, @RequestParam(required = false) String date) {
+    public WeatherResponse getWeather(
+            @RequestParam String location,
+            @RequestParam(required = false) String date) {
+
         if (date == null || date.trim().isEmpty()) {
             date = LocalDate.now().toString();
+
+        } else {
+            date = date.split("T")[0];
         }
 
-        System.out.println(date);
-
-        return  weatherService.getWeatherData(location, date);
+        return weatherService.getWeatherData(location, date);
     }
 }
