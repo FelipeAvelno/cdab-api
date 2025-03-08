@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @RestController
 public class WeatherController {
@@ -15,10 +15,12 @@ public class WeatherController {
     private WeatherService weatherService;
 
     @GetMapping("/clima")
-    public WeatherResponse getWeather(@RequestParam String location, @RequestParam String date) {
-        if (date == null) {
-            date = String.valueOf(LocalDateTime.now());
+    public WeatherResponse getWeather(@RequestParam String location, @RequestParam(required = false) String date) {
+        if (date == null || date.trim().isEmpty()) {
+            date = LocalDate.now().toString();
         }
+
+        System.out.println(date);
 
         return  weatherService.getWeatherData(location, date);
     }

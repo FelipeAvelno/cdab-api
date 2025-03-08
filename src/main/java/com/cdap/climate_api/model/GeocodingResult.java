@@ -3,7 +3,6 @@ package com.cdap.climate_api.model;
 public class GeocodingResult {
     private double latitude;
     private double longitude;
-    // Outros campos podem ser adicionados conforme a necessidade (ex.: name, country_code, etc.)
 
     public double getLatitude() {
         return latitude;

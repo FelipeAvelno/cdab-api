@@ -16,8 +16,8 @@ public class WeatherApiService {
     private final RestTemplate restTemplate = new RestTemplate();
 
     public WeatherResponse fetchWeatherData(Coordinates coordinates, String date) {
-        String url = String.format("%s?latitude=%s&longitude=%s&date=%s&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,windspeed_10m",
-                openMeteoApiUrl, coordinates.getLatitude(), coordinates.getLongitude(), date);
+        String url = String.format("%s?latitude=%s&longitude=%s&start_date=%s&end_date=%s&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,windspeed_10m",
+                openMeteoApiUrl, coordinates.getLatitude(), coordinates.getLongitude(), date, date);
 
         OpenMeteoResponse response = restTemplate.getForObject(url, OpenMeteoResponse.class);
 
