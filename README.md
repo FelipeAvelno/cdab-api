@@ -43,7 +43,7 @@ Esta aplicação é uma API desenvolvida em Java 17 com Spring Boot para anális
 ### Observações:
 
 > [!WARNING]
-> Enviar data que não estão na base de dados da API (geralmente dados de muito tempo atrás) gerará um erro em forma de .json,  Deve enviar ano, mês e dia (enviar dias que ainda não ocorreram gerará erro).
+> Enviar data que não estão na base de dados da API (geralmente dados de muito tempo atrás) gerará um erro em forma de .json,  deve enviar ano, mês e dia (enviar dias que ainda não ocorreram gerará erro).
 Os dados podem variar em aproximadamente 4 unidades.
 
 > [!NOTE]
